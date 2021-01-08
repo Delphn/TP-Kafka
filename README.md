@@ -58,7 +58,7 @@ create database [db-name]
 ```
 
 ### Connect to database in pgAdmin
-password: Pa$$w0rd!  
+password: [password]  
 object => create => server  
 - In General fill in name, and in connection give configuration from springboot properties
 
