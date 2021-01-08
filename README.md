@@ -63,14 +63,11 @@ object => create => server
 - In General fill in name, and in connection give configuration from springboot properties
 
 ### SQL Commands used in the project
-```
-# 
-```
+```    
+@Query(value = "SELECT c FROM Countries c WHERE c.Country = :pays")
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
+@Query("SELECT g.TotalDeaths FROM Global g")
+
+@Query("SELECT g.TotalConfirmed FROM Global g")
+
+@Query("SELECT g FROM Global g WHERE g.id = 1")
