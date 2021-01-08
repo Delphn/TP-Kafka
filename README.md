@@ -3,7 +3,7 @@
 # TP Intergiciel
 
 - Lancer le serveur zookeeper et un broker
-```
+```shell
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
 ```
@@ -11,7 +11,7 @@ bin/kafka-server-start.sh config/server.properties
 ## Commandes pour créer les topics
 
 1. Topic1
-```
+```shell
 bin/kafka-topics.sh --zookeeper localhost:2181 \
 --create \
 --replication-factor 1 \
@@ -19,7 +19,7 @@ bin/kafka-topics.sh --zookeeper localhost:2181 \
 --topic Topic1
 ```
 2. Topic2
-```
+```shell
 bin/kafka-topics.sh --zookeeper localhost:2181 \
 --create \
 --replication-factor 1 \
@@ -27,7 +27,7 @@ bin/kafka-topics.sh --zookeeper localhost:2181 \
 --topic Topic2
 ```
 3. Topic3
-```
+```shell
 bin/kafka-topics.sh --zookeeper localhost:2181 \
 --create \
 --replication-factor 1 \
@@ -37,23 +37,23 @@ bin/kafka-topics.sh --zookeeper localhost:2181 \
 
 ## Commande pour creer le user, pswd, database, ... en ligne de commande
 
-```
-# create user
+```shell
+# Create user
 create user [user-name]
 
 # Give the user a password
 alter user [user-name] with encrypted password '<really secure password>'
 
-# switch to the new user account
+# Switch to the new user account
 sudo -i -u [user-name]
 
-# switch to postgres command line
+# Switch to postgres command line
 psql
 
 # Create a database
 create database [db-name]
 
-# switch to covid19 database
+# Switch to covid19 database
 \c covid19
 ```
 
