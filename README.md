@@ -39,13 +39,13 @@ bin/kafka-topics.sh --zookeeper localhost:2181 \
 
 ```
 # create user
-create user [name]
+create user [user-name]
 
 # Give the user a password
-alter user [name] with encrypted password '<really secure password>'
+alter user [user-name] with encrypted password '<really secure password>'
 
-# switch to the postgres account
-sudo -i -u postgres
+# switch to the new user account
+sudo -i -u [user-name]
 
 # switch to postgres command line
 psql
@@ -62,13 +62,7 @@ password: Pa$$w0rd!
 object => create => server  
 - In General fill in name, and in connection give configuration from springboot properties
 
-### SQL Commands used in the project from JPA repositories
+### SQL Commands used in the project
 ```
-@Query(value = "SELECT c FROM Countries c WHERE c.Country = :pays")
-
-@Query("SELECT g.TotalDeaths FROM Global g")
-
-@Query("SELECT g.TotalConfirmed FROM Global g")
-
-@Query("SELECT g FROM Global g WHERE g.id = 1")
+# 
 ```
