@@ -71,5 +71,4 @@ object => create => server
 @Query("SELECT g.TotalConfirmed FROM Global g")
 
 @Query("SELECT g FROM Global g WHERE g.id = 1")
-# 
 ```
